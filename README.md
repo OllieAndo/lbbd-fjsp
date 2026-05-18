@@ -6,8 +6,8 @@ A Logic-Based Benders Decomposition (LBBD) framework for the Flexible Job Shop S
 
 The FJSP assigns operations to machines (where each operation has multiple machine options) and sequences them to minimise makespan. This project decomposes the problem using LBBD:
 
-- **Master Problem (MIP):** Assigns operations to machines — solved with PySCIPOpt
-- **Sub-Problem (CP):** Schedules operations on each machine — solved with OR-Tools CP-SAT
+- **Master Problem (MIP):** Assigns operations to machines - solved with PySCIPOpt
+- **Sub-Problem (CP):** Schedules operations on each machine - solved with OR-Tools CP-SAT
 - **Benders Cuts:** Feasibility and optimality cuts drive convergence
 
 A monolithic CP-SAT baseline is included for comparison.
@@ -37,6 +37,12 @@ Instances from [FJSPLib](https://scheduleopt.github.io/benchmarks/fjsplib) inclu
 
 ## Installation
 
+# Make the local environment.
+```bash
+python -m venv .venv
+```
+
+# Install the requirements.
 ```bash
 pip install -r requirements.txt
 ```
@@ -46,9 +52,9 @@ pip install -r requirements.txt
 
 ## Tech Stack
 
-- **PySCIPOpt** — MIP master problem
-- **OR-Tools CP-SAT** — CP sub-problem and monolithic baseline
-- **Matplotlib** — Gantt chart visualisation
+- **PySCIPOpt** - MIP master problem
+- **OR-Tools CP-SAT** - CP sub-problem and monolithic baseline
+- **Matplotlib** - Gantt chart visualisation
 - **Python 3.10+**
 
 ## References
@@ -60,4 +66,4 @@ pip install -r requirements.txt
 ## Licence
 
 Code: MIT
-Benchmark data: [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/) — sourced from [ScheduleOpt/benchmarks](https://github.com/ScheduleOpt/benchmarks)
+Benchmark data: [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/) - sourced from [ScheduleOpt/benchmarks](https://github.com/ScheduleOpt/benchmarks)
