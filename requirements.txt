@@ -1,0 +1,3 @@
+ortools>=9.9
+pyscipopt>=5.0
+matplotlib>=3.8
